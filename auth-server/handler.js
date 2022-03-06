@@ -48,7 +48,9 @@ module.exports.getAuthURL = async () => {
   return {
     statusCode: 200,
     headers: {
-      "Access-Control-Allow-Origin": "*",
+      'Access-Control-Allow-Headers': '',
+            'Access-Control-Allow-Origin': '',
+            'Access-Control-Allow-Credentials': true,
     },
     body: JSON.stringify({
       authUrl: authUrl,
@@ -86,7 +88,9 @@ module.exports.getAccessToken = async (event) => {
        
           body: JSON.stringify(token),
           headers: {
-            "Access-Control-Allow-Origin": "*",
+            'Access-Control-Allow-Headers': '',
+            'Access-Control-Allow-Origin': '',
+            'Access-Control-Allow-Credentials': true,
           }
         };
       })
@@ -134,7 +138,9 @@ module.exports.getAccessToken = async (event) => {
           return {
             statusCode: 200,
             headers: {
-              'Access-Control-Allow-Origin' :'*'
+              'Access-Control-Allow-Headers': '',
+            'Access-Control-Allow-Origin': '',
+            'Access-Control-Allow-Credentials': true,
             },
             body: JSON.stringify({events: results.data.items})
 
@@ -143,7 +149,9 @@ module.exports.getAccessToken = async (event) => {
           return {
             statusCode: 500,
             headers: {
-              'Access-Control-Allow-Origin' :'*'
+              'Access-Control-Allow-Headers': '',
+            'Access-Control-Allow-Origin': '',
+            'Access-Control-Allow-Credentials': true,
             },
             body: JSON.stringify({error})
           }
