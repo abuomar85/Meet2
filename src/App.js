@@ -38,9 +38,11 @@ class App extends Component {
       <div className="App">
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
         <EventList events={this.state.events} />
+        {/* <NumberOfEvents updateEvents={this.updateEvents} /> */}
       </div>
     );
   }
 }
 
 export default App;
+
