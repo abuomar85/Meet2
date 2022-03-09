@@ -5,6 +5,7 @@ import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import * as atatus from 'atatus-spa';
+// import * as serviceWorker from './serviceWorker';
 atatus.config('68ba9b7986b9413aad66541ae8b47566').install();
 ReactDOM.render(
   <React.StrictMode>
@@ -24,3 +25,5 @@ serviceWorkerRegistration.unregister();
 reportWebVitals();
 
 atatus.notify(new Error('Test Atatus Setup'));
+
+// serviceWorker.unregister();
